@@ -19,6 +19,13 @@ class Song
     end
     genre_hash
   end
+  def self.artist_count
+    artist_hash = Hash.new(0)
+    @@artists.each do |genre|
+      artist_hash[genre] += 1
+    end
+    artist_hash
+  end
   def initialize(name, artist, genre)
     @name = name
     @artist = artist 
